@@ -34,11 +34,11 @@ const Navbar = () => {
       <ul className='flex flex-col md:hidden gap-x-10 w-full h-screen'>
         <div className='w-full flex h-[80px]'>
           <button className='w-full justify-end flex items-center bg-blue-600' onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <FaBars size={"24px"} className='m-4' /> : <CgClose size={"24px"} className='m-4' />}
+            {isOpen ? <CgClose size={"24px"} className='m-4' /> : <FaBars size={"24px"} className='m-4' /> }
           </button>
           {/* <button><IoIosClose size={"24px"} /></button> */}
         </div>
-        {isOpen ? <></> : (<>
+        {isOpen ? (<>
           {/* h screen is the problem causing the shift in the navbar up and down */}
           <div className='justify-center items-center flex flex-col gap-y-10 bg-blue-600 h-screen'>
             {NavbarConstantsData && NavbarConstantsData.map((item, index) => (
@@ -48,7 +48,7 @@ const Navbar = () => {
             <NavLink to={'/question'} className="text-lg font-semibold italic hover:text-2xl hover:transition" >Question</NavLink>
             <NavLink to={'/about'} className="text-lg font-semibold italic hover:text-2xl hover:transition" >About</NavLink>
             <NavLink to={'/contact'} className="text-lg font-semibold italic hover:text-2xl hover:transition" >Contact</NavLink> */}
-          </div></>)}
+          </div></>) : <></>}
         {/* <div>
           <NavLink to={'/'} className="text-lg font-semibold italic hover:text-2xl">Home</NavLink>
           <NavLink to={'/about'} className="text-lg font-semibold italic hover:text-2xl hover:transition" >About</NavLink>

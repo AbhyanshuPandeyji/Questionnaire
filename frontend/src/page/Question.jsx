@@ -1,4 +1,5 @@
 import React from 'react'
+import QuestionsCard from "../components/Questions/QuestionsCard.jsx"
 
 const Question = () => {
   return (
@@ -8,7 +9,9 @@ const Question = () => {
         <div className='bg-green-400 md:w-[30vw] w-full'>search</div>
       </div>
       <div className='flex w-full justify-center'>
-        <div className='md:w-[80vw] w-full bg-blue-400 h-fit min-h-screen'>content</div>
+        <div className='md:w-[80vw] w-full bg-blue-400 h-fit min-h-screen'>
+          <QuestionsCard />
+        </div>
         {/* <div>filters</div> */}
       </div>
     </div>
