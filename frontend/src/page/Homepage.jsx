@@ -1,8 +1,20 @@
 import React from 'react'
 
+import Hero from "../components/Homepage/Hero.jsx"
+import HomeAbout from "../components/Homepage/HomeAbout.jsx"
+import Feature from "../components/Homepage/Feature.jsx"
+
 const Homepage = () => {
   return (
-    <div className='h-[150vh] bg-violet-800'>page what if my height was more than expected</div>
+    <div className='min-h-[150vh] h-fit'>
+      <div className='h-[100vh]'>
+        <Hero/>
+      </div>
+      <div className='h-fit'>
+        <HomeAbout />
+        <Feature />
+      </div>
+    </div>
   )
 }
 

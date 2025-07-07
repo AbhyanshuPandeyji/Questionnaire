@@ -1,16 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import QuestionsCard from "../components/Questions/QuestionsCard.jsx"
+import { PreMadeTags } from '../constants/QuestionsConstants.js'
 
 const Question = () => {
+
+  const [tagSelected, setTagSelected] = useState("");
+
+  const handleTags = (e,item) => {
+    e.preventDefault();
+    if(tagSelected === item){
+      setTagSelected("");
+    }else{
+      setTagSelected(item);
+    }
+  }
+
   return (
     <div className='flex flex-col'>
-      <div className='flex md:flex-row flex-col min-h-[150px] h-fit w-full'>
-        <div className='md:w-[70vw] w-full bg-yellow-400'>tags</div>
-        <div className='bg-green-400 md:w-[30vw] w-full'>search</div>
+      <div className='flex md:flex-row flex-col min-h-[100px] h-fit w-[80vw] mx-auto'>
+        <div className='md:w-[70%] w-full flex gap-4 justify-start items-center '>
+          {PreMadeTags && PreMadeTags.map((item, index) => (
+            <button onClick={(e) => handleTags(e,item)} className='px-4 py-2 rounded-lg text-lg 
+            font-semibold border-2 h-fit border-black' key={index}>
+              {item}
+            </button>
+          ))}
+        </div>
+        <div className=' md:w-[30%] w-full flex justify-start items-center'>
+          <input type="text" className='border-2 rounded-lg bg-gray-200 text-lg p-2' />
+          <button className='bg-green-500 p-2 rounded-lg border-2 border-green-500'>Search</button>
+        </div>
       </div>
       <div className='flex w-full justify-center'>
         <div className='md:w-[80vw] w-full bg-blue-400 h-fit min-h-screen'>
-          <QuestionsCard />
+          <QuestionsCard tagSelected={tagSelected} />
         </div>
         {/* <div>filters</div> */}
       </div>

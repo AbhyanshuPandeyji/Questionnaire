@@ -1,11 +1,19 @@
 export const QNA = [
     {
         id: 1,
+        tags: {
+            customTag: ["Coding"],
+            preMadeTag: ["Javascript"]
+        },
         question: `What Question I ask`,
         answer: `The One that solves my problems and i can now work on solutions`,
     },
     {
         id: 2,
+        tags: {
+            customTag: ["Coding"],
+            preMadeTag: ["Javascript"]
+        },
         question: "How to Plan A Project / A month",
         answer: `- **Formula To Follow to Set and Achieve Goals:**
     \n1. **Step 1: Decide Exactly What you want.  Either Decide By Self or Sit With Boss.** ( One of the worst use of time is to do something very well that need not to be done at all )
@@ -18,6 +26,10 @@ export const QNA = [
     },
     {
         id: 3,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["Life"]
+        },
         question: "What is a goal and how to follow it",
         answer: `***Hard Work, Experience, Skills and Success cannot be bought its Earned. Make sure i understand it correctly. ( I cannot bypass it I will have to do it in-order to get it ).\***
 
@@ -38,11 +50,19 @@ export const QNA = [
     },
     {
         id: 4,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["Life"]
+        },
         question: "why i overdo everything",
         answer: `The One that solves my problems and i can now work on solutions`,
     },
     {
         id: 5,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["Life"]
+        },
         question: `What it means to learn about money what can I learn about a single word , 
             what there is and what's it's use , because they say money but it doesn't mean just 
             learning just word , but what it includes as a concept such as how it's occur , 
@@ -76,6 +96,10 @@ export const QNA = [
     },
     {
         id: 6,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["MERN"]
+        },
         question: `what is mvc model`,
         answer: `🧠 MVC Model — Explained Simply
 \nMVC stands for Model–View–Controller.
@@ -97,6 +121,10 @@ It is a design pattern used to structure your code — especially in web and sof
     },
     {
         id: 7,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["MERN"]
+        },
         question: `What is promises in javascript `,
         answer: `1️⃣ What is a Promise in JavaScript?
 \n👉 A Promise is a special JavaScript object that represents the result of an asynchronous operation — either:
@@ -129,6 +157,10 @@ promise.then(result => console.log(result)) // prints "Success!" after 1 sec
     },
     {
         id: 8,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["MERN"]
+        },
         question: `What is a Closure in JavaScript?`,
         answer: `2️⃣ What is a Closure in JavaScript?
 \n👉 A closure happens when:
@@ -145,6 +177,10 @@ promise.then(result => console.log(result)) // prints "Success!" after 1 sec
     },
     {
         id: 9,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["MERN"]
+        },
         question: `How can we access document elements in JavaScript?`,
         answer: `How can we access document elements in JavaScript?
 \n✅ We use DOM (Document Object Model) methods to select elements on a web page.
@@ -160,6 +196,11 @@ promise.then(result => console.log(result)) // prints "Success!" after 1 sec
     },
     {
         id: 10,
+        tags: {
+            customTag: [""],
+            preMadeTag: ["MERN"]
+            
+        },
         question: `\n What is sql and no sql databases , what are  their key differences and how do they function differently `,
         answer: `\n \n ✅ Great question! Let’s break it down clearly so you understand what SQL and NoSQL databases are, how they work, and how they differ — especially useful when deciding between MongoDB (NoSQL) and SQL databases for your projects.
 
@@ -199,4 +240,11 @@ Neo4j (graph database)
 
 📦 A collection of JSON-like documents or objects.`,
     },
+]
+
+
+export const PreMadeTags = [
+    "Javascript",
+    "Life",
+    "MERN",
 ]
