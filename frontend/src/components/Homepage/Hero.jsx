@@ -11,7 +11,7 @@ const Hero = () => {
       {/* <img src={heroImg} alt="" className='h-[100vh] w-full object-cover ' /> */}
       <div className='z-[100] flex justify-center items-center w-full h-full'>
         <div className='flex h-[50vh] w-[80vw] flex-col gap-y-8 justify-center items-center'>
-          <h1 className='text-8xl font-bold'>This Is My Own Question Bank</h1>
+          <h1 className='text-8xl font-bold text-center'>This Is My Own Question Bank</h1>
           <h3 className='text-4xl italic font-light'>You asked for it , here you go</h3>
           {/* <h3 className='text-4xl italic font-light'><TypewriterEffect text={`See Whats New For me To Wonder`} /></h3> */}
         </div>

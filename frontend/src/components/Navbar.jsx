@@ -24,7 +24,8 @@ const Navbar = () => {
     <div className='fixed z-[999] w-full md:h-[80px] min-h-[80px] md:bg-blue-600 items-center flex justify-center'>
       <ul className='md:flex hidden gap-x-10 '>
         {NavbarConstantsData && NavbarConstantsData.map((item, index) => (
-          <NavLink to={item?.path} key={index} className="text-lg font-semibold italic hover:text-2xl" >{item?.title}</NavLink>
+          <NavLink to={item?.path} key={index} className="text-lg roboto-text
+           font-semibold italic transition-all duration-300 ease-in-out hover:underline" >{item?.title}</NavLink>
         ))}
         {/* <NavLink to={'/'} className="text-lg font-semibold italic hover:text-2xl">Home</NavLink>
         <NavLink to={'/question'} className="text-lg font-semibold italic hover:text-2xl hover:transition" >Question</NavLink>
@@ -42,7 +43,8 @@ const Navbar = () => {
           {/* h screen is the problem causing the shift in the navbar up and down */}
           <div className='justify-center items-center flex flex-col gap-y-10 bg-blue-600 h-screen'>
             {NavbarConstantsData && NavbarConstantsData.map((item, index) => (
-              <NavLink to={item?.path} key={index} className="text-lg font-semibold italic hover:text-2xl" >{item?.title}</NavLink>
+              <NavLink to={item?.path} key={index} className="text-lg roboto-text font-semibold italic 
+              transition-all duration-300 ease-in-out hover:underline" >{item?.title}</NavLink>
             ))}
             {/* <NavLink to={'/'} className="text-lg font-semibold italic hover:text-2xl">Home</NavLink>
             <NavLink to={'/question'} className="text-lg font-semibold italic hover:text-2xl hover:transition" >Question</NavLink>

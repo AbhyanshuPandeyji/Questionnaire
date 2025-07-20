@@ -20,8 +20,10 @@ const Question = () => {
       <div className='flex md:flex-row flex-col min-h-[100px] h-fit w-[80vw] mx-auto'>
         <div className='md:w-[70%] w-full flex gap-4 justify-start items-center '>
           {PreMadeTags && PreMadeTags.map((item, index) => (
-            <button onClick={(e) => handleTags(e,item)} className='px-4 py-2 rounded-lg text-lg 
-            font-semibold border-2 h-fit border-black' key={index}>
+            <button onClick={(e) => handleTags(e,item)} 
+            className={`px-4 ${tagSelected === item ? "bg-blue-400" : "none" }
+               cursor-pointer py-2 rounded-lg text-lg 
+            font-semibold border-2 h-fit border-black`} key={index}>
               {item}
             </button>
           ))}
@@ -32,7 +34,7 @@ const Question = () => {
         </div>
       </div>
       <div className='flex w-full justify-center'>
-        <div className='md:w-[80vw] w-full bg-blue-400 h-fit min-h-screen'>
+        <div className='md:w-[80vw] w-full h-fit min-h-screen'>
           <QuestionsCard tagSelected={tagSelected} />
         </div>
         {/* <div>filters</div> */}
