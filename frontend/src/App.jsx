@@ -1,6 +1,8 @@
 
 import './App.css'
 import Routing from './router/routing.jsx';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
 
