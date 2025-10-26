@@ -1,10 +1,13 @@
 import React from 'react'
+import meImg from '../assets/meimage.jpg'
 
 const About = () => {
   return (
     <div className='flex justify-center items-center min-h-[90vh] h-fit'>
-      <div className='w-full md:w-1/2'><img src="" alt="" /></div>
-      <div className='w-full md:w-1/2 flex flex-col gap-y-10'>
+      <div className='w-full md:w-1/2 justify-center flex'>
+      <img src={meImg} alt="" className='w-80' />
+      </div>
+      <div className='w-full md:w-1/2 flex flex-col gap-y-10 p-2'>
         <p className='text-gray-600 roboto-text'>
           I am currently a web developer exploring the world around me for to see its and my own full potential,
           there were many hiccups here and there in the way that lead my life into a wrong and sometimes a very

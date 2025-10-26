@@ -1,18 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import heroImg from '../../assets/heroimg.jpg'
+// import heroImg from '../../assets/heroimg.jpg'
 import "./HomePage.scss"
 import TypewriterEffect from '../../utils/text/TypeWriterEffect';
+// import { animate } from 'framer-motion';
 
 const Hero = () => {
 
+  const [text, setText] = useState("")
+
+
+
+  // const showText = () => {
+  //   const arr = ["yes", "no", "why", "why not", "who", "how"]
+  //   let i = 0;
+  //   setInterval(() => {
+  //     if (i === arr.length - 1) {
+  //       i = 0;
+  //     }
+  //     else {
+  //       i += 1
+  //     }
+  //     setText(arr[i]);
+  //   }, 2000)
+  // }
+
+
 
   return (
-    <div className='bg-red-400 w-full h-[100vh]'>
-      {/* <img src={heroImg} alt="" className='h-[100vh] w-full object-cover ' /> */}
+    <div className='bg-image w-full h-[100vh]'>
       <div className='z-[100] flex justify-center items-center w-full h-full'>
         <div className='flex h-[50vh] w-[80vw] flex-col gap-y-8 justify-center items-center'>
           <h1 className='text-8xl font-bold text-center'>This Is My Own Question Bank</h1>
+
           <h3 className='text-4xl italic font-light'>You asked for it , here you go</h3>
+          {/* <h1 onBeforeInput={showText} >Some {text}</h1> */}
           {/* <h3 className='text-4xl italic font-light'><TypewriterEffect text={`See Whats New For me To Wonder`} /></h3> */}
         </div>
       </div>

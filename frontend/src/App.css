@@ -1,6 +1,8 @@
 .bg-image {
-    background-image: url("./assets/heroimg.jpg");
+    background-image: url("./assets/brandi-redd-aJTiW00qqtI-unsplash-min.jpg");
     background-size:contain;
-    background-position:top;
+    /* background-position:top; */
     background: cover;
+    background-repeat: no-repeat;
+
 }

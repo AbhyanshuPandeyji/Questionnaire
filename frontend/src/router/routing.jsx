@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, NavLink, Outlet, RouterProvider } from 'react-router-dom';
 
 // page imports
 import Navbar from '../components/Navbar.jsx';
@@ -8,6 +8,7 @@ import Homepage from "../page/Homepage.jsx";
 import About from '../page/About.jsx'
 import Contact from '../page/Contact.jsx'
 import Question from '../page/Question.jsx'
+import CreateQuestion from '../page/CreateQuestion.jsx'
 
 //icon
 import { IoMdCreate } from "react-icons/io";
@@ -18,12 +19,14 @@ const Layout = () => {
     <div className='relative'>
       <Navbar />
       <div className='relative md:top-[80px] top-[80px]'>
-        <div className='min-h-screen h-fit'>
-          {/* <div className=''>
-            <div className=''>
-              <IoMdCreate size={"40px"} />
-            </div>
-          </div> */}
+        <div className='relative min-h-screen h-fit'>
+          <div className=''>
+            <NavLink
+            to={"/create"}
+              className='fixed bottom-10 right-10 p-4 bg-green-400 cursor-pointer rounded-full text-white'>
+              <IoMdCreate size={"20px"} />
+            </NavLink>
+          </div>
           <Outlet />
         </div>
         <Footer />
@@ -53,6 +56,10 @@ const route = createBrowserRouter([
         path: "/question",
         element: <Question />
       },
+      {
+        path: "/create",
+        element: <CreateQuestion />
+      }
     ]
   }
 ])
